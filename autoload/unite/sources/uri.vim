@@ -23,7 +23,7 @@ function! g:uri_unite_source.action_table.open_uri.func(candidate)
 endfunction
 
 function! g:uri_unite_source.gather_candidates(args, context)
-  let l:uris = system(g:uripath . " " . bufname("%"))
+  let l:uris = system(g:uripath . " " . bufname("."))
   let g:ret = map(split(l:uris, "\n"), 
     \ '{ "word": v:val, "action__uri": join(split(v:val, ":")[1:],":") }')
   return g:ret
