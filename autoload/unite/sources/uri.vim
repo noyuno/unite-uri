@@ -1,5 +1,5 @@
 if exists("g:loaded_unite_uri")
-   "finish
+   finish
 endif
 let g:loaded_unite_uri = 1
 let s:save_cpo = &cpo
